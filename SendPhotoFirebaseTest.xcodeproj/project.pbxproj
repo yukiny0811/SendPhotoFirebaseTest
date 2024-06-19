@@ -11,6 +11,10 @@
 		56FB0E9F2C22E2110092EDEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FB0E9E2C22E2110092EDEF /* ContentView.swift */; };
 		56FB0EA12C22E2120092EDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FB0EA02C22E2120092EDEF /* Assets.xcassets */; };
 		56FB0EA42C22E2120092EDEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FB0EA32C22E2120092EDEF /* Preview Assets.xcassets */; };
+		56FB0EAC2C22E2570092EDEF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 56FB0EAB2C22E2570092EDEF /* FirebaseFirestore */; };
+		56FB0EAE2C22E2570092EDEF /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 56FB0EAD2C22E2570092EDEF /* FirebaseFirestoreCombine-Community */; };
+		56FB0EB02C22E2570092EDEF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 56FB0EAF2C22E2570092EDEF /* FirebaseFirestoreSwift */; };
+		56FB0EB22C22E2570092EDEF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 56FB0EB12C22E2570092EDEF /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56FB0EAC2C22E2570092EDEF /* FirebaseFirestore in Frameworks */,
+				56FB0EB22C22E2570092EDEF /* FirebaseStorage in Frameworks */,
+				56FB0EAE2C22E2570092EDEF /* FirebaseFirestoreCombine-Community in Frameworks */,
+				56FB0EB02C22E2570092EDEF /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,12 @@
 			dependencies = (
 			);
 			name = SendPhotoFirebaseTest;
+			packageProductDependencies = (
+				56FB0EAB2C22E2570092EDEF /* FirebaseFirestore */,
+				56FB0EAD2C22E2570092EDEF /* FirebaseFirestoreCombine-Community */,
+				56FB0EAF2C22E2570092EDEF /* FirebaseFirestoreSwift */,
+				56FB0EB12C22E2570092EDEF /* FirebaseStorage */,
+			);
 			productName = SendPhotoFirebaseTest;
 			productReference = 56FB0E992C22E2110092EDEF /* SendPhotoFirebaseTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 56FB0E902C22E2110092EDEF;
+			packageReferences = (
+				56FB0EAA2C22E2570092EDEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 56FB0E9A2C22E2110092EDEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +361,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56FB0EAA2C22E2570092EDEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56FB0EAB2C22E2570092EDEF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56FB0EAA2C22E2570092EDEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		56FB0EAD2C22E2570092EDEF /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56FB0EAA2C22E2570092EDEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		56FB0EAF2C22E2570092EDEF /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56FB0EAA2C22E2570092EDEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		56FB0EB12C22E2570092EDEF /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56FB0EAA2C22E2570092EDEF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56FB0E912C22E2110092EDEF /* Project object */;
 }
